@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SearchComponent } from './components/Search/search.component'; // Import the standalone SearchComponent
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { SearchComponent } from './components/Search/search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SearchComponent, HttpClientModule], // Add HttpClientModule to imports
+  imports: [RouterOutlet, SearchComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

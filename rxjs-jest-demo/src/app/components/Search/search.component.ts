@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { NgFor } from '@angular/common'; 
+import { NgFor } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { SearchService } from '../../services/search/search.service';
 import { debounceTime, filter, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [NgFor, ReactiveFormsModule], 
+  imports: [NgFor, ReactiveFormsModule, HttpClientModule],
   templateUrl: './search.component.html', 
-  styleUrls: ['./search.component.css'] 
+  styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
   searchControl = new FormControl('');
